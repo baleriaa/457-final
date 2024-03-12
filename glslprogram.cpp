@@ -534,6 +534,14 @@ GLSLProgram::SetUniformVariable( char* name, float vals[3] )
 	}
 };
 
+void GLSLProgram::SetUniformVariable(char* name, float val0, float val1) {
+    int loc;
+    if ((loc = GetUniformLocation(name)) >= 0) {
+        this->Use();
+        glUniform2f(loc, val0, val1);
+    }
+}
+
 
 bool
 GLSLProgram::IsExtensionSupported( const char *extension )

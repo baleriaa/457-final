@@ -84,6 +84,7 @@ class GLSLProgram
 	void	SetUniformVariable( char *, float );
 	void	SetUniformVariable( char *, float, float, float );
 	void	SetUniformVariable( char *, float[3] );
+	void SetUniformVariable( char *, float, float);
 	void	SetVerbose( bool );
 	void	UnUse( );
 	void	Use( );
